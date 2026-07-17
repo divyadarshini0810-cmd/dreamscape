@@ -50,18 +50,18 @@ export function Navbar() {
 
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <Button asChild variant="ghost" className="hidden sm:inline-flex">
-            <Link href="/login">Sign in</Link>
+          <Button nativeButton={false} render={<Link href="/login" />} variant="ghost" className="hidden sm:inline-flex">
+            Sign in
           </Button>
-          <Button asChild className="hidden sm:inline-flex">
-            <Link href="/signup">Get Started</Link>
+          <Button nativeButton={false} render={<Link href="/signup" />} className="hidden sm:inline-flex">
+            Get Started
           </Button>
 
           <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden" aria-label="Open menu">
-                <Menu className="size-5" />
-              </Button>
+            <SheetTrigger
+              render={<Button variant="ghost" size="icon" className="md:hidden" aria-label="Open menu" />}
+            >
+              <Menu className="size-5" />
             </SheetTrigger>
             <SheetContent side="right" className="w-72">
               <SheetTitle className="sr-only">Navigation</SheetTitle>
@@ -76,11 +76,11 @@ export function Navbar() {
                   </Link>
                 ))}
                 <div className="mt-4 flex flex-col gap-2">
-                  <Button asChild variant="outline">
-                    <Link href="/login">Sign in</Link>
+                  <Button nativeButton={false} render={<Link href="/login" />} variant="outline">
+                    Sign in
                   </Button>
-                  <Button asChild>
-                    <Link href="/signup">Get Started</Link>
+                  <Button nativeButton={false} render={<Link href="/signup" />}>
+                    Get Started
                   </Button>
                 </div>
               </div>

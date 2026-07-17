@@ -20,11 +20,9 @@ export function Cta() {
         <p className="mx-auto mt-4 max-w-xl text-pretty text-muted-foreground">
           Join over 120,000 learners building their futures with an AI mentor that never sleeps.
         </p>
-        <Button asChild size="lg" className="mt-8">
-          <Link href="/signup">
-            Start for free
-            <ArrowRight className="size-4" />
-          </Link>
+        <Button nativeButton={false} render={<Link href="/signup" />} size="lg" className="mt-8">
+          Start for free
+          <ArrowRight className="size-4" />
         </Button>
       </div>
     </section>

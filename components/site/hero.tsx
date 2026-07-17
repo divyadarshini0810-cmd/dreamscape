@@ -33,14 +33,12 @@ export function Hero() {
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row lg:justify-start">
-            <Button asChild size="lg" className="w-full sm:w-auto">
-              <Link href="/signup">
-                Get Started Free
-                <ArrowRight className="size-4" />
-              </Link>
+            <Button nativeButton={false} render={<Link href="/signup" />} size="lg" className="w-full sm:w-auto">
+              Get Started Free
+              <ArrowRight className="size-4" />
             </Button>
-            <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
-              <Link href="#how">See how it works</Link>
+            <Button nativeButton={false} render={<Link href="#how" />} size="lg" variant="outline" className="w-full sm:w-auto">
+              See how it works
             </Button>
           </div>
 

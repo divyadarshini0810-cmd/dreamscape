@@ -38,7 +38,7 @@ export function Faq() {
         <p className="mt-4 text-pretty text-muted-foreground">Everything you need to know before you start.</p>
       </div>
 
-      <Accordion type="single" collapsible className="mt-10">
+      <Accordion className="mt-10">
         {faqs.map((f, i) => (
           <AccordionItem key={i} value={`item-${i}`} className="border-border/60">
             <AccordionTrigger className="text-left font-medium hover:no-underline">{f.q}</AccordionTrigger>
